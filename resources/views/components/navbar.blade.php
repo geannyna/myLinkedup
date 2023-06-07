@@ -2,14 +2,13 @@
   <div class="container">
     
       <a class="navbar-brand nav_letra fs-5" href="{{ url('/') }}">
-       <img src="{{ asset ('/img/chat.png')}}" style="height: 2em">
+       <img src="{{ asset ('./img/chat111.png')}}" style="height: 1.5em">
       </a>    
         <form action="" method="GET" role="search">
            <div class="input_group">
             {{-- action="{{route('search')}}" --}}
-                <input type="search" name="q" class="mi_search" placeholder="{{__('Buscar...')}}" >
-                    <i class="bi btn_search bi-search">    
-                    </i>
+                <input type="search" name="q" class="mi_search" placeholder="{{__('Buscar por cargo')}}" >
+                <input type="search" name="qq" class="mi_search" placeholder="{{__('Buscar por localizacion')}}" >    
          </div>   
         </form>
      
@@ -20,28 +19,25 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <!-- Left Side Of Navbar -->
-          <ul class="navbar-nav me-auto">
-              <li class="nav-item dropdown">
-                   <a class="nav-link dropdown-toggle nav_letra" href="#" role="button"data-bs-toggle="dropdown"aria-expanded="false"{{-- href="{{ route('login') }}"--}}>{{ __('Categorías') }} 
-               </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      
-                   {{--   @foreach ($categories as $category )
-                      <li><a class="dropdown-item nav_letra" href="{{route('category.ads',$category)}}">{{__($category->name)}}</a></li>    
-                      @endforeach--}}
-                  </ul>
-              </li>
-              
+          <ul class="navbar-nav me-auto">            
               <li class="nav-item">
-                  <a class="nav-link nav_letra"{{-- href="{{ route('contact') }}"--}}>{{ __('Contacto') }}</a>
+                    
+                  <a class="nav-link nav_letra" href="./home"> <img class='nav_img' src="./img/home1.png">
+                  </a>
+                
               </li>
               <li class="nav-item">
-
+                <a class="nav-link nav_letra" href=""><img class='nav_img' src="./img/group1.png"></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav_letra"{{-- href="{{ route('contact') }}"--}}>{{ __('Contacto') }}</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav_letra"{{-- href="{{ route('contact') }}"--}}>{{ __('Contacto') }}</a>
+              </li>
+              <li class="nav-item">
                   <a class="nav-link nav_letra" {{--href="{{ route('revisor.become') }}"--}}>{{ __('Trabaja con nosotros') }}</a>
-      
-              </li>
-            
-             
+              </li>             
           </ul>
 
           <!-- Right Side Of Navbar -->

@@ -8,3 +8,11 @@
 height: 60px;
 
 }
+.nav_img{
+  height: 1.4em;
+}
+.nav_items{
+  display:block;
+  justify-content: center;
+  align-items: center;
+}
