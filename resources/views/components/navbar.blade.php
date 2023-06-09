@@ -52,12 +52,12 @@
           </ul>
 
           <!-- Right Side Of Navbar -->
-          <ul class="navbar-nav ms-auto">
+          <ul class="navbar-nav me-auto">
               <!-- Authentication Links -->
               @guest
                   @if (Route::has('login'))
                       <li class="nav-item">
-                          <a class="nav-link nav_letra" href="{{ route('login') }}">{{ __('Entrar') }}</a>
+                          <a class="nav-link nav_letra" href="{{ route('login') }}"><p>{{ __('Entrar') }} </p> </a>
                       </li>
                   @endif
 

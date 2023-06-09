@@ -1,6 +1,12 @@
 /* #00BA9B -- color logo */
 :root{
   --color-navletra: rgb(2, 2, 2);
+  --color-background: rgb(254, 254, 254);
+}
+*{
+  background-color: var(--color-background);
+  padding: 0;
+  margin: 0;
 }
 .mi_search{
   height: 2em;
