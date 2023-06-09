@@ -61,19 +61,19 @@
                         <a class="nav-link nav_letra" href="{{route('login')}}"><span>Entrar</span></a>
                     </li>  
                @endif
-               @if (Route::has('register'))
+               {{-- @if (Route::has('register'))
                     <li class="nav-item">
                         <a class="nav-link nav_letra" href="{{route('register')}}"><span>Registrate</span></a>
                     </li>  
-                @endif
-            @else
+                @endif --}}
+            {{-- @else
             <li class="nav-item">
                 <form id="logoutForm" action="{{route('logout')}}" method="post">
                 @csrf
                 </form>
                 <a id="logoutBtn" class="nav-link nav_letra" href="#" >{{ __('Salir') }}
                 </a>
-            </li> 
+            </li>  --}}
            @endguest
                       
                      
