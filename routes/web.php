@@ -19,7 +19,7 @@ Route::get('/', function () {
 })->name('home');
 
 // Route::get('/', [PublicController::class, 'index'])->name('home');
-Auth::routes();
+
 
 Auth::routes();
 
