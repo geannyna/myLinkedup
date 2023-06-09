@@ -51,72 +51,35 @@
               </li>             
           </ul>
 
-          <!-- Right Side Of Navbar -->
-          <ul class="navbar-nav me-auto">
+          <!-- Right Side Of Navbar --> 
+           <ul class="navbar-nav me-auto"> 
               <!-- Authentication Links -->
-              @guest
-                  @if (Route::has('login'))
-                      <li class="nav-item">
-                          <a class="nav-link nav_letra" href="{{ route('login') }}"><p>{{ __('Entrar') }} </p> </a>
-                      </li>
-                  @endif
-
-                  @if (Route::has('register'))
-                      <li class="nav-item">
-                          <a class="nav-link nav_letra" href="{{ route('register') }}">{{ __('Regístrate') }}</a>
-                      </li>
-                  @endif
-              @else
-              <a href="{{ route ('ads.create') }}" class="text-decoration-none mt-2 nav_letra fs-6">{{__('Subir producto')}}</a>
-                  <li class="nav-item dropdown">
-                      <a id="navbarDropdown" class="nav-link dropdown-toggle nav_letra" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                          {{ Auth::user()->name }}
-                          {{-- 😊 --}}
-                      </a>
+           
+           @guest
+               @if (Route::has('login'))
+                    <li class="nav-item">
+                        <a class="nav-link nav_letra" href="{{route('login')}}"><span>Entrar</span></a>
+                    </li>  
+               @endif
+               @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="nav-link nav_letra" href="{{route('register')}}"><span>Registrate</span></a>
+                    </li>  
+                @endif
+            @else
+            <li class="nav-item">
+                <form id="logoutForm" action="{{route('logout')}}" method="post">
+                @csrf
+                </form>
+                <a id="logoutBtn" class="nav-link nav_letra" href="#" >{{ __('Salir') }}
+                </a>
+            </li> 
+           @endguest
                       
-                    
-                      <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <form id="logoutForm" action="{{ route('logout') }}" method="POST" class="d-none">
-                              @csrf
-                          </form>
-                          
-                          <ul class="list-unstyled">
-                            @if (Auth::user()->is_revisor)
-                                <li>
-                                  <a class="dropdown-item nav_letra" href="{{route('revisor.home')}} ">
-                                      {{__('Revisor')}}
-                                      <span class="badge rounded-pill bg-danger">
-                                          {{\App\Models\Ad::ToBeRevisionedCount()}}
-                                      </span>
-                                  </a>
-                                </li>
-                            @endif
-                      <li>
-                          <a class="dropdown-item nav_letra" href="{{ route('panel.index') }}">{{ __('Mi perfil') }}</a>
-                      </li>     
-                      <li>
-                          <a class="dropdown-item nav_letra" href="#" id="logoutBtn">{{ __('Salir') }}
-                          </a>
-                      </li>   
-                      </div>
-                    
-                  </li>
-              </ul>
-              @endguest
+                     
             
-                  {{-- <a class="nav-link me-2" href="">
-                      <x-locale lang="es" country="es"></x-locale>
-                  </a>
-         
-                  <a class="nav-link me-2" href="">
-                      <x-locale lang="us" country="us"></x-locale>
-                  </a>
-            
-                  <a class="nav-link" href="">
-                      <x-locale lang="it" country="it"></x-locale>
-                  </a>   --}}
-                         
-          </ul>
+                     
+          </ul> 
       </div>
   </div>
 </nav>
