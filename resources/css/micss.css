@@ -1,18 +1,26 @@
 /* #00BA9B -- color logo */
-
+:root{
+  --color-navletra: rgb(2, 2, 2);
+}
 .mi_search{
   height: 2em;
   border-radius: 10px;
 }
 .mi_nav{
-height: 60px;
+height: 70px;
 
+}
+.nav-item{
+  text-align: center;
 }
 .nav_img{
   height: 1.4em;
 }
-.nav_items{
-  display:block;
-  justify-content: center;
-  align-items: center;
+.nav-item{
+  width: 80px;
+}
+.nav_letra{
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--color-navletra);
 }
