@@ -69,7 +69,7 @@
                         </li>
                     @endif
                 @else
-                <a href="" class="text-decoration-none mt-2 nav_letra fs-6">{{__('Subir producto')}}</a>
+                {{-- <a href="" class="text-decoration-none mt-2 nav_letra fs-6">{{__('Subir producto')}}</a> --}}
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle nav_letra" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}
@@ -78,23 +78,23 @@
                         
                       
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                              <form id="logoutForm" action="{{ route('logout') }}" method="POST" class="d-none">
+                              <form id="logoutForm" action="{{route('logout')}}" method="POST" class="d-none">
                                 @csrf
                             </form>
                             
                             <ul class="list-unstyled">
                              
-                        <li>
-                            <a class="dropdown-item nav_letra" href="">{{ __('Mi perfil') }}</a>
-                        </li>     
-                        <li>
-                            <a class="dropdown-item nav_letra" href="#" id="logoutBtn">{{ __('Salir') }}
-                            </a>
-                        </li>   
+                            <li>
+                                <a class="dropdown-item nav_letra" href="">{{ __('Mi perfil') }}</a>
+                            </li>     
+                            <li>
+                              <a class="dropdown-item nav_letra" href="#" id="logoutBtn">{{ __('Salir') }}
+                              </a>
+                            </li>  
                         </div>
-                      
+                      </ul>
                     </li>
-                </ul>
+                
                 @endguest
                                          
             </ul>
