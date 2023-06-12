@@ -51,31 +51,54 @@
               </li>             
           </ul>
 
-          <!-- Right Side Of Navbar --> 
-           <ul class="navbar-nav me-auto"> 
-              <!-- Authentication Links -->
-           
-            @guest
-               @if (Route::has('login'))
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('login')}}"><span>Entrar</span></a>
-                    </li>  
-               @endif
-               @if (Route::has('register'))
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{route('register')}}"><span>Registrate</span></a>
-                    </li>  
-                @endif 
-             @else
-            <li class="nav-item">
-                <form id="logoutForm" action="{{route('logout')}}" method="post">
-                @csrf
-                </form>
-                <a id="logoutBtn" class="nav-link nav_letra" href="#" >{{ __('Salir') }}
-                </a>
-            </li> 
-           @endguest      
-          </ul> 
-      </div>
-  </div>
+               <!-- Right Side Of Navbar -->
+               <ul class="navbar-nav ms-auto">
+                <!-- Authentication Links -->
+                
+                
+                @guest
+                    @if (Route::has('login'))
+                        <li class="nav-item">
+                            <a class="nav-link nav_letra" href="{{ route('login') }}">{{ __('Entrar') }}</a>
+                        </li>
+                    @endif
+
+                    @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="nav-link nav_letra" href="{{ route('register') }}">{{ __('Regístrate') }}</a>
+                        </li>
+                    @endif
+                @else
+                <a href="" class="text-decoration-none mt-2 nav_letra fs-6">{{__('Subir producto')}}</a>
+                    <li class="nav-item dropdown">
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle nav_letra" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            {{ Auth::user()->name }}
+                            {{-- 😊 --}}
+                        </a>
+                        
+                      
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                              <form id="logoutForm" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                            
+                            <ul class="list-unstyled">
+                             
+                        <li>
+                            <a class="dropdown-item nav_letra" href="">{{ __('Mi perfil') }}</a>
+                        </li>     
+                        <li>
+                            <a class="dropdown-item nav_letra" href="#" id="logoutBtn">{{ __('Salir') }}
+                            </a>
+                        </li>   
+                        </div>
+                      
+                    </li>
+                </ul>
+                @endguest
+                                         
+            </ul>
+        </div>
+    </div>
 </nav>
+

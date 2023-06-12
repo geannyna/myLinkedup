@@ -1,8 +1,8 @@
 <x-layout>
-    <x-slot name='title'>FastSales - {{ __('Entrar') }}</x-slot>
+    <x-slot name='title'>myLinkedup - {{ __('Entrar') }}</x-slot>
 
 <div class="container-fluid">
-    <div class="row justify-content-center">
+    <div class="row d-flex justify-content-center mt-5 pt-5">
         <div class="col-md-8">
             <div class="card card_login">
                 <div class="card-header mi_letra">{{ __('Entrar') }}</div>
