@@ -2,7 +2,7 @@
 
     <x-slot name="title"> myLinkedup - Register</x-slot>
     <div class="container-fluid">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mt-5 pt-5">
             <div class="col-md-8">
                 <div class="card card_login">
                     <div class="card-header mi_letra">{{ __('Regístrate') }}</div>
