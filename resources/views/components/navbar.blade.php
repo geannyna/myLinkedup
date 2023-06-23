@@ -7,8 +7,8 @@
         <form action="" method="GET" role="search">
            <div class="input_group">
             {{-- action="{{route('search')}}" --}}
-                <input type="search" name="q" class="mi_search" placeholder="{{__('Buscar por cargo')}}" >
-                <input type="search" name="qq" class="mi_search" placeholder="{{__('Buscar por localizacion')}}" >    
+                <input type="search" name="q" class="mi_search" placeholder="{{__(' Buscar por cargo...')}}" >
+                <input type="search" name="qq" class="mi_search" placeholder="{{__(' Buscar por localizacion...')}}" >    
          </div>   
         </form>
      
@@ -21,34 +21,35 @@
           <!-- Left Side Of Navbar -->
           <ul class="navbar-nav me-auto">            
               <li class="nav-item">   
-                  <a class="nav-link nav_letra" href="./home"> <img class='nav_img' src="./img/home1.png" alt="">
+                  <a class="nav-link nav_letra" href="{{ route('home') }}"> <img class='nav_img' src={{ asset("./img/home1.png")}} alt="">
                     <p>Inicio</p>
                   </a> 
               </li>
               <li class="nav-item">
                 <a class="nav-link nav_letra" href="">
-                  <img class='nav_img' src="./img/group1.png">
+                  <img class='nav_img' src={{ asset("./img/group1.png")}}>
                   <p>Mi red</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link nav_letra" href="">
-                  <img class='nav_img' src="./img/briefcase1.png">
+                  <img class='nav_img' src={{ asset("./img/briefcase1.png")}}>
                   <p>Empleos</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link nav_letra"{{-- href="{{ route('contact') }}"--}}>
-                    <img class='nav_img' src="./img/chat1.png">
+                    <img class='nav_img' src={{ asset("./img/chat1.png")}}>
                     <p>Mensajes</p>
                 </a>
               </li>
               <li class="nav-item">
                   <a class="nav-link nav_letra" {{--href="{{ route('revisor.become') }}"--}}>
-                    <img class='nav_img' src="./img/notification1.png">
+                    <img class='nav_img' src={{ asset("./img/notification1.png")}}>
                     <p>Notificaciones</p>
                   </a>
-              </li>             
+              </li> 
+                        
           </ul>
 
                <!-- Right Side Of Navbar -->

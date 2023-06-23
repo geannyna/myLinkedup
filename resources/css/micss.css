@@ -33,3 +33,12 @@ height: 70px;
   font-weight: bold;
   color: var(--color-navletra);
 }
+.nav_btn{
+  
+  height: 40px;
+  border: 2px solid black ;
+  border-radius: 12px;
+}
+/* .card_central{
+  width: 70%;
+} */
