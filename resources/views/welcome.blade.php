@@ -14,6 +14,11 @@
                     @endif
 
                     {{ __('You are logged in!') }}
+                    
+                        <a class="nav-link nav_letra" {{--href="{{ route('revisor.become') }}"--}}>
+                          <p>Crear publicacion</p>
+                        </a>
+                    
                 </div>
             </div>
         </div>

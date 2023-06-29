@@ -55,7 +55,7 @@
                <!-- Right Side Of Navbar -->
                <ul class="navbar-nav ms-auto">
                 <!-- Authentication Links -->
-                
+              
                 
                 @guest
                     @if (Route::has('login'))
